@@ -8,9 +8,7 @@
 int main(void)
 {
 
-    int n;
-
-    n = add(89, 9);
-    printf("%d\n", n);
+jack_bauer();
     return (0);
+
 }
