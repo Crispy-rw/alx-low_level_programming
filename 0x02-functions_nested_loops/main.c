@@ -7,17 +7,10 @@
  */
 int main(void)
 {
-	
-    int r;
 
-    r = _abs(-1);
-    printf("%d\n", r);
-    r = _abs(0);
-    printf("%d\n", r);
-    r = _abs(1);
-    printf("%d\n", r);
-    r = _abs(-98);
-    printf("%d\n", r);
+    int n;
 
+    n = add(89, 9);
+    printf("%d\n", n);
     return (0);
 }

@@ -5,7 +5,7 @@
 *
 *@n: function argument
 *
-*Return: Returns 1 if n is greater than zero or return 0 if n is zero 
+*Return: Returns 1 if n is greater than zero or return 0 if n is zero
 *and return -1 if n is less than zero
 */
 
