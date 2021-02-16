@@ -5,7 +5,7 @@
  * the value it points to to 98
  *
  * @n: pointer to an int
- * Return: 0(Nothing)
+ * Return: void (Nothing)
  */
 
 
