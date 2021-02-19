@@ -1,45 +1,26 @@
 #include "holberton.h"
 
-
 /**
-* _strlen - return the length of a string
-*
-*@c: string to be counted
-*Return: Integer
-*/
-
-
-int _strlen(char *c)
-{
-
-int i;
-while (*(c + i) != '\0')
-{
-	i++;
-}
-return (i);
-}
-
-/**
-* _strcat - return the concatenates two strings
-*
-*@dest: destinations string
-*@src: source string
-* Return: destinations string
-*/
-
+ * _strcat- function that concatenates two strings.
+ *
+ * @dest: pointer to destination char
+ * @src: pointer to source char
+ * Return: char
+ */
 
 char *_strcat(char *dest, char *src)
 {
+	int i = 0;
+	int j = 0;
 
-int i = 0;
-int len = _strlen(dest);
-while (*(src + i) != '\0')
-{
-	*(dest + len) = *(src + i);
-	len++;
-	i++;
+	while (*(dest + i) != '\0')
+		i++;
+	while (*(src + j) != '\0')
+	{
+		*(dest + i) = *(src + j);
+		i++;
+		j++;
+	}
+	return (dest);
 }
-dest[len++] = '\0';
-return (dest);
-}
+
