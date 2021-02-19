@@ -1,9 +1,10 @@
 #include "holberton.h"
 
-/**  islower -checker where a character is in lowecase
+/**
+*cap_string -function that capitalizes all words in a string
 *
-*@c: character to be checked
-*Return: 1 if c is lowercase esle 0
+*@s: character to be checked
+*Return: changed string
 */
 
 
