@@ -40,5 +40,6 @@ while (*(src + i) != '\0')
 	len++;
 	i++;
 }
+dest[len++] = '\0';
 return (dest);
 }
