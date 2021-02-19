@@ -9,3 +9,4 @@ char *string_toupper(char *s);
 char *cap_string(char *s);
 int _islower(char c);
 char *leet(char *str);
+char *rot13(char *s);
