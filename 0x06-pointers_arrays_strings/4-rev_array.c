@@ -19,14 +19,14 @@ int temp, last, i;
 last = n - 1;
 i = 0;
 
-while (i < n)
+while (i < last)
 {
 
-	temp = *(a + last);
-	*(a + last) = *(a + i);
-	*(a + i) = temp;
+	temp = *(a + i);
+	*(a + i) = *(a + last);
+	*(a + last) = temp;
 	i++;
-
+	last--;
 }
 
 }
