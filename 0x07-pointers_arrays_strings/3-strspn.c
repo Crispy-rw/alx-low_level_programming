@@ -21,7 +21,6 @@ unsigned int _strspn(char *s, char *accept)
 		{
 			if (*s == *(accept + j))
 				flag = 1;
-				printf("%c == %c\n", *s, *(accept + j));
 			j += 1;
 		}
 		j = 0;
