@@ -1,11 +1,12 @@
 #include "stdlib.h"
 
 
-
 /**
 *str_concat -  function that concatenates two strings.
+*
 *@s1: string one
 *@s2: string two
+*
 *Return: concatenation of two strings
 */
 
@@ -14,8 +15,12 @@ char *str_concat(char *s1, char *s2)
 	char *concat_str;
 	int s1_size = 0, s2_size = 0, counter = 0, counter2 = 0;
 
-	if (s1 == NULL || s2 == NULL)
-		return (NULL);
+	if (s1 == NULL)
+	s1 = "";
+
+	if (s2 == NULL)
+	s2 = "";
+
 
 	while (*(s1 + s1_size) != '\0')
 	s1_size++;
