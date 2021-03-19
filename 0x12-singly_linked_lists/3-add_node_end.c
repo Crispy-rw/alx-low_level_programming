@@ -1,38 +1,56 @@
-#include "lists.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "lists.h"
 
 /**
-*add_node_end - add node to tail
-*@head: head node
-*@str: str to add
-*
-*Return: coid
-*/
+ * add_node_end - prints elements of list
+ * @head: pointer to our head
+ * @str: point to string
+ * Return: number of nodes
+ **/
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	int count = 0;
-	list_t *current = *head;
+	unsigned int count;
+	list_t *new_node;
+	list_t *current;
 
-	while (current->next != NULL)
+	new_node = malloc(sizeof(list_t));
+	current = *head;
+
+	if (new_node == NULL)
 	{
-		current = current->next;
-	}
-
-	/* now we can add a new variable */
-	current->next = (list_t *) malloc(sizeof(list_t));
-	if (current->next == NULL)
 		return (NULL);
-
-	current->next->str = strdup(str);
-	if (current->next->str != '\0')
-	{
-		while (current->next->str[count] != '\0')
-		count++;
 	}
-	current->next->len = count;
-	current->next->next = NULL;
-	return (current->next);
+
+	new_node->str = strdup(str);
+	if (new_node->str != '\0')
+	{
+		for (count = 0; new_node->str[count] != '\0'; count++)
+		{
+			;
+		}
+	}
+
+
+	new_node->len = count;
+
+	if (*head == NULL)
+	{
+		*head = new_node;
+		return (new_node);
+	}
+	else
+	{
+		current = *head;
+		while (current->next != NULL)
+		{
+			current = current->next;
+		}
+
+		current->next = new_node;
+	}
+	return (current);
 }
+
