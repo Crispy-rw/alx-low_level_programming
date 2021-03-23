@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+* add_nodeint_end - add node to the last node
+* @head: head node
+* @n: integer
+* Return: listint_t type
+*/
 
 listint_t *add_nodeint_end(listint_t **head, const int n)
 {
@@ -16,7 +22,7 @@ return (NULL);
 
 new_node->n = n;
 
-if(*head == NULL)
+if (*head == NULL)
 {
 
 *head = new_node;
