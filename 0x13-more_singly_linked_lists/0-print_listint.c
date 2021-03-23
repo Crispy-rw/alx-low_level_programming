@@ -16,9 +16,11 @@ const listint_t *current = h;
 
 while (current != NULL)
 {
-
+	if (current->n != '\0')
+	{
 	printf("%d\n", current->n);
 	current = current->next;
+	}
 	count++;
 }
 return (count);
