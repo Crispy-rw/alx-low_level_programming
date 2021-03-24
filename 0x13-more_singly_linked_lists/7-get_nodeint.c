@@ -19,14 +19,13 @@ if (head == NULL)
 return (NULL);
 
 current = head;
-
 while (counter <= index && current != NULL)
 {
 current = current->next;
 counter++;
 }
 
-if (counter < index)
+if (counter != index)
 return (NULL);
 
 
