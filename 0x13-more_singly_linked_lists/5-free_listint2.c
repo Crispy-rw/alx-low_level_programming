@@ -14,7 +14,7 @@ listint_t *ptr;
 if (!head)
 return;
 
-while (head != NULL)
+while (*head != NULL)
 {
 ptr = *head;
 *head = ptr->next;
