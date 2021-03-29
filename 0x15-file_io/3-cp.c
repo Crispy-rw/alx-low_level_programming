@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 
 	if (ft == -1)
 	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-	
+
 
 	while ((r = read(ff, buffer, 1024)) != 0)
 	{
@@ -43,14 +43,14 @@ int main(int argc, char *argv[])
 
 		if (w == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
-		
+
 	}
 
 	if (close(ff) == -1)
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff), exit(100);
-
+	{dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ff), exit(100);
+	}
 	if (close(ft) == -1)
-	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft), exit(100);
-
+	{dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ft), exit(100);
+	}
 	return (0);
 }
